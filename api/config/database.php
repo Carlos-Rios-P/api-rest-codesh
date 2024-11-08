@@ -31,6 +31,12 @@ return [
 
     'connections' => [
 
+        'mongodb' => [
+            'driver' => 'mongodb',
+            'dsn' => "mongodb+srv://" . env('MONGODB_USERNAME') . ":" . env('MONGODB_PASSWORD') . "@" . env('MONGODB_HOST') . "/?retryWrites=true&w=majority",
+            'database' => env('MONGODB_DATABASE')
+        ],
+
         'sqlite' => [
             'driver' => 'sqlite',
             'url' => env('DB_URL'),
